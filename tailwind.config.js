@@ -16,6 +16,7 @@ module.exports = {
         colors: {
             orange: "#E05F00",
             lead: "#5C6274",
+            lead50: "#5C627480",
             white: "#F8FAFC",
         },
         container: {
