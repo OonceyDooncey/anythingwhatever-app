@@ -3,6 +3,7 @@
         <Tabs default-value="home">
             <TabsContent value="home">
                 <RecomendedFood />
+                <PopularFoods />
             </TabsContent>
             <TabsContent value="cuisines"></TabsContent>
             <TabsContent value="budget"></TabsContent>
