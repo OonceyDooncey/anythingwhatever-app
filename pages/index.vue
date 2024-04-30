@@ -2,6 +2,7 @@
     <NuxtLayout>
         <Tabs default-value="home">
             <TabsContent value="home">
+                <RecomendedFood />
             </TabsContent>
             <TabsContent value="cuisines"></TabsContent>
             <TabsContent value="budget"></TabsContent>
