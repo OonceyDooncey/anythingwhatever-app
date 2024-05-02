@@ -7,6 +7,9 @@ module.exports = {
     prefix: "",
 
     theme: {
+        screens: {
+            xs: { max: "340px" },
+        },
         fontFamily: {
             shadowsintolight: ['"Shadows Into Light"', "cursive"],
             amatic: ['"Amatic SC"', "sans-serif"],
