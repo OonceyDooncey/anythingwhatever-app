@@ -5,8 +5,10 @@
                 <RecomendedFood />
                 <PopularFoods />
             </TabsContent>
-            <TabsContent value="cuisines"></TabsContent>
             <TabsContent value="budget"></TabsContent>
+            <TabsContent value="cuisines">
+                <CuisinesOptions />
+            </TabsContent>
             <TabsContent value="randomize"></TabsContent>
             <TabsList>
                 <TabsTrigger value="home">
