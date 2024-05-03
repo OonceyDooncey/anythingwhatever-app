@@ -11,32 +11,33 @@
             <TabsContent value="budget">
                 <BudgetOptions />
             </TabsContent>
-            <TabsContent value="randomize"></TabsContent>
             <TabsList>
                 <TabsTrigger value="home">
                     <span class="material-symbols-outlined scale-150">
                         home
                     </span>
-                    <h1 class="font-caveat text-xl pt-1">Home</h1>
+                    <h2 class="font-caveat text-xl pt-1">Home</h2>
                 </TabsTrigger>
                 <TabsTrigger value="cuisines">
                     <span class="material-symbols-outlined scale-150">
                         menu_book
                     </span>
-                    <h1 class="font-caveat text-xl pt-1">Cuisines</h1>
+                    <h2 class="font-caveat text-xl pt-1">Cuisines</h2>
                 </TabsTrigger>
                 <TabsTrigger value="budget">
                     <span class="material-symbols-outlined scale-150">
                         monetization_on
                     </span>
-                    <h1 class="font-caveat text-xl pt-1">Budget</h1>
+                    <h2 class="font-caveat text-xl pt-1">Budget</h2>
                 </TabsTrigger>
-                <TabsTrigger value="randomize">
+                <NuxtLink
+                    to="/results/anything"
+                    class="flex flex-col items-center text-lead50">
                     <span class="material-symbols-outlined scale-150">
                         cached
                     </span>
-                    <h1 class="font-caveat text-xl pt-1">Randomize</h1>
-                </TabsTrigger>
+                    <h2 class="font-caveat text-xl pt-1">Randomize</h2>
+                </NuxtLink>
             </TabsList>
         </Tabs>
     </NuxtLayout>
