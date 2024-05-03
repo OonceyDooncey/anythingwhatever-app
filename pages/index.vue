@@ -1,5 +1,9 @@
 <template>
     <NuxtLayout>
+        <h1
+            class="font-amatic text-white text-3xl font-bold tracking-wider p-3 h-[10%]">
+            ANYTHING, WHATEVER
+        </h1>
         <Tabs default-value="home">
             <TabsContent value="home">
                 <RecomendedFood />
