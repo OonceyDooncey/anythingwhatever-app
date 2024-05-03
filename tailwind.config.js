@@ -14,7 +14,6 @@ module.exports = {
             shadowsintolight: ['"Shadows Into Light"', "cursive"],
             amatic: ['"Amatic SC"', "sans-serif"],
             caveat: ['"Caveat"', "cursive"],
-            permenantmarker: ['"Permanent Marker"', "cursive"],
         },
         colors: {
             orange: "#E05F00",
