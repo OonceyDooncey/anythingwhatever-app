@@ -28,7 +28,7 @@
                     <div class="mt-4 flex justify-center break-words">
                         <span
                             class="font-shadowsintolight text-4xl tracking-wide text-lead h-10 font-bold text-center">
-                            {{ food }}
+                            {{ foodName }}
                         </span>
                     </div>
                 </div>
@@ -36,6 +36,7 @@
             <div class="flex items-center w-[80%] justify-between mt-14">
                 <Drawer>
                     <DrawerTrigger
+                        @click="fetchFoodInfo(food)"
                         class="font-caveat bg-orange text-xl rounded-3xl text-white w-[50%] p-2">
                         Find out more
                         <FoodInfo />
@@ -65,13 +66,15 @@ useHead({
     ],
 });
 
-const food = ref<string>();
+const foodName = ref<string>();
 const text = ref<string>("You should have.....");
 const img = ref<string>(
     "https://res.cloudinary.com/dfdaqvqps/image/upload/v1714728235/Anything%2C%20whatever/mobile/vkcmxzh04yuqc3hxvi65.png"
 );
 const skeleton = ref();
 let nahCounter = 1;
+let food: string;
+
 const category = useRoute().params.options;
 let value = useRoute().query.value;
 
@@ -87,7 +90,8 @@ const fetchFood = async function () {
     const response = await $fetch("/api/food", {
         query: { category, value },
     });
-    food.value = response.suggestedFood;
+    foodName.value = response.suggestedFood;
+    food = response.suggestedFood;
 
     if (response.statusCode === 200) {
         skeleton.value.classList.add("hidden");
@@ -104,7 +108,7 @@ fetchFood();
 
 const regenerateFood = function () {
     skeleton.value.classList.remove("hidden");
-    food.value = "";
+    foodName.value = "";
 
     fetchFood();
     nahCounter++;
