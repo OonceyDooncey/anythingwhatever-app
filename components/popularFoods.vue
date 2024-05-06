@@ -7,6 +7,7 @@
             <li class="mt-6">
                 <Drawer>
                     <DrawerTrigger
+                        @click="fetchFoodInfo(food.food)"
                         class="bg-transparent border-2 border-lead rounded-xl flex items-center p-4 w-full justify-between">
                         <NuxtImg
                             src="https://media.graphassets.com/resize=fit:max,width:1440/output=format:png/YLjWG0T6SH6czhYGP7BU"
@@ -17,12 +18,12 @@
                         <div class="flex flex-col w-4/6">
                             <h4
                                 class="text-left font-shadowsintolight text-lead text-2xl">
-                                {{ food.name }}
+                                {{ food.food }}
                             </h4>
                             <div class="flex">
                                 <Badge
                                     class="bg-orange border-0 mr-1 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
-                                    {{ food.calories }}
+                                    {{ food.calories }}kcal
                                 </Badge>
                                 <Badge
                                     class="bg-orange border-0 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
@@ -54,9 +55,26 @@ useHead({
     ],
 });
 
-const popularFoods = [
-    { name: "Jollibee", calories: "800kcal", cuisine: "Mexican" },
-];
-</script>
+interface popularFood {
+    food: string;
+    popularity: number;
+    calories: number;
+    cuisine: string;
+}
 
-<style scoped></style>
+const popularFoods = ref<popularFood[]>();
+const fetchPopularFoods = async function () {
+    const response = await $fetch("/api/popularfoods");
+
+    // console.log(response);
+    if (response.statusCode !== 200) {
+        showError({
+            statusCode: response.statusCode,
+            statusMessage: response.message,
+        });
+    }
+
+    popularFoods.value = response.popularFoodList;
+};
+fetchPopularFoods();
+</script>
