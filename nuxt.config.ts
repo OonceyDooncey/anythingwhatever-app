@@ -6,6 +6,7 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "shadcn-nuxt",
         "@nuxtjs/supabase",
+        "@pinia/nuxt",
     ],
     image: {
         cloudinary: {
