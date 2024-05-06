@@ -13,7 +13,7 @@ export default defineEventHandler(async (event) => {
     let foodSuggestions: string[] = [];
 
     if (category === "anything") {
-        const { data, error } = await supabase.from("foods").select("*");
+        const { data, error } = await supabase.from("foods").select("food");
 
         if (error) {
             return {
@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
     if (value) {
         const { data, error } = await supabase
             .from("foods")
-            .select("*")
+            .select("food")
             .eq(`${category}`, value);
 
         if (error) {
