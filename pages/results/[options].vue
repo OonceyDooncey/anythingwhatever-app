@@ -73,7 +73,15 @@ const img = ref<string>(
 const skeleton = ref();
 let nahCounter = 1;
 const category = useRoute().params.options;
-const value = useRoute().query.value;
+let value = useRoute().query.value;
+
+//Capitalize first letter of query if category selected is cuisine as database first letter is capitalized
+function capitalize(string: any) {
+    return string[0].toUpperCase() + string.slice(1);
+}
+if (category === "cuisine") {
+    value = capitalize(value);
+}
 
 const fetchFood = async function () {
     const response = await $fetch("/api/food", {
@@ -101,6 +109,7 @@ const regenerateFood = function () {
     fetchFood();
     nahCounter++;
 
+    //Switch character image and text on page for the first 4 times "nah" option is pressed
     switch (nahCounter) {
         case 1:
             text.value = "Okay, how about";
