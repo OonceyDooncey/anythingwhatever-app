@@ -21,4 +21,7 @@ export const fetchFoodInfo = async (food: string) => {
     store.selectedFoodCuisine = response.cuisine;
     store.selectedFoodInfo = response.description;
     store.selectedFoodPopularity = response.popularity;
+
+    const trimmedFoodName = store.selectedFood.replace(/\s/g, "");
+    store.searchURL = `https://www.google.com/maps/search/${trimmedFoodName}`;
 };

@@ -7,5 +7,6 @@ export const useGlobalStore = defineStore("useGlobalStore", {
         selectedFoodCuisine: "",
         selectedFoodInfo: "",
         selectedFoodPopularity: 0,
+        searchURL: "",
     }),
 });
