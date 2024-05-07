@@ -106,7 +106,7 @@ const fetchFood = async function () {
 };
 fetchFood();
 
-const regenerateFood = function () {
+const regenerateFood = debounce(function () {
     skeleton.value.classList.remove("hidden");
     foodName.value = "";
 
@@ -136,5 +136,5 @@ const regenerateFood = function () {
                 "https://res.cloudinary.com/dfdaqvqps/image/upload/v1714728235/Anything%2C%20whatever/mobile/bngegcyclu3tqs0vv9wr.png";
             break;
     }
-};
+}, 1000);
 </script>
