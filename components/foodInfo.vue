@@ -26,8 +26,10 @@
         </DrawerDescription>
         <DrawerClose class="flex flex-col mt-6 w-[60%] items-center">
             <a
-                href="https://www.google.com/maps/search/jollibee"
-                class="bg-orange font-caveat bold text-2xl w-full rounded-3xl text-white py-1">
+                :href="store.searchURL"
+                target="_blank"
+                class="bg-orange font-caveat bold text-2xl w-full rounded-3xl text-white py-1"
+                @click="updatePopularity">
                 I'll take it
             </a>
             <Button
@@ -45,4 +47,21 @@ import { DrawerContent } from "@/components/ui/drawer";
 import { useGlobalStore } from "~/stores";
 
 const store = useGlobalStore();
+
+const updatePopularity = async () => {
+    const popularity = store.selectedFoodPopularity;
+    const foodName = store.selectedFood;
+
+    const response = await $fetch("/api/popularity", {
+        method: "POST",
+        body: { popularity, foodName },
+    });
+
+    if (response.statusCode === 500) {
+        showError({
+            statusCode: response.statusCode,
+            statusMessage: response,
+        });
+    }
+};
 </script>
