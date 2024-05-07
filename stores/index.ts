@@ -6,5 +6,6 @@ export const useGlobalStore = defineStore("useGlobalStore", {
         selectedFoodCalories: 0,
         selectedFoodCuisine: "",
         selectedFoodInfo: "",
+        selectedFoodPopularity: 0,
     }),
 });

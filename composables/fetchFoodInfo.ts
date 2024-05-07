@@ -20,4 +20,5 @@ export const fetchFoodInfo = async (food: string) => {
     store.selectedFoodCalories = response.calories;
     store.selectedFoodCuisine = response.cuisine;
     store.selectedFoodInfo = response.description;
+    store.selectedFoodPopularity = response.popularity;
 };
