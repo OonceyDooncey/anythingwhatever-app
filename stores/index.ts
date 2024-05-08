@@ -9,5 +9,6 @@ export const useGlobalStore = defineStore("useGlobalStore", {
         selectedFoodPopularity: 0,
         selectedFoodImage: "",
         searchURL: "",
+        fetching: true,
     }),
 });

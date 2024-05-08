@@ -3,48 +3,69 @@
         <h3 class="font-caveat font-bold text-lead xs:text-2xl text-3xl">
             Popular choice
         </h3>
-        <ul v-for="food in popularFoods">
-            <li class="mt-6">
-                <Drawer>
-                    <DrawerTrigger
-                        @click="fetchFoodInfo(food.food)"
-                        class="bg-transparent border-2 border-lead rounded-xl flex items-center p-4 w-full justify-between">
-                        <NuxtImg
-                            src="https://media.graphassets.com/resize=fit:max,width:1440/output=format:png/YLjWG0T6SH6czhYGP7BU"
-                            format="webp"
-                            width="60px"
-                            height="60px"
-                            class="rounded-xl mr-2" />
+        <div>
+            <ul v-for="skeleton in 3" ref="skeleton">
+                <li
+                    class="w-[362px] h-[100px] border-2 border-lead rounded-xl mt-6">
+                    <div class="flex items-center justify-between p-4">
+                        <Skeleton
+                            class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
                         <div class="flex flex-col w-4/6">
-                            <h4
-                                class="text-left font-shadowsintolight text-lead text-2xl">
-                                {{ food.food }}
-                            </h4>
-                            <div class="flex">
-                                <Badge
-                                    class="bg-orange border-0 mr-1 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
-                                    {{ food.calories }}kcal
-                                </Badge>
-                                <Badge
-                                    class="bg-orange border-0 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
-                                    {{ food.cuisine }}
-                                </Badge>
+                            <Skeleton class="w-[150px] h-[25px] rounded-xl" />
+                            <div class="mt-[7px] flex items-center">
+                                <Skeleton class="w-[58px] h-[32px] mr-1" />
+                                <Skeleton class="w-[85px] h-[32px]" />
                             </div>
                         </div>
-                        <span class="material-symbols-outlined text-lead w-1/6">
-                            chevron_right
-                        </span>
-                        <FoodInfo />
-                    </DrawerTrigger>
-                </Drawer>
-            </li>
-        </ul>
+                        <span class="w-1/6"> </span>
+                    </div>
+                </li>
+            </ul>
+            <ul v-for="food in popularFoods">
+                <li class="mt-6">
+                    <Drawer>
+                        <DrawerTrigger
+                            @click="fetchFoodInfo(food.food)"
+                            class="bg-transparent border-2 border-lead rounded-xl flex items-center p-4 w-full justify-between">
+                            <NuxtImg
+                                :src="food.image"
+                                format="webp"
+                                width="60px"
+                                height="60px"
+                                class="rounded-xl mr-2 w-[60px] h-[60px] object-cover" />
+                            <div class="flex flex-col w-4/6">
+                                <h4
+                                    class="text-left font-shadowsintolight text-lead text-2xl">
+                                    {{ food.food }}
+                                </h4>
+                                <div class="flex">
+                                    <Badge
+                                        class="bg-orange border-0 mr-1 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
+                                        {{ food.calories }}kcal
+                                    </Badge>
+                                    <Badge
+                                        class="bg-orange border-0 font-caveat text-lg hover:bg-orange pl-4 pr-4 xs:pl-2 xs:pr-2">
+                                        {{ food.cuisine }}
+                                    </Badge>
+                                </div>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-lead w-1/6">
+                                chevron_right
+                            </span>
+                            <FoodInfo />
+                        </DrawerTrigger>
+                    </Drawer>
+                </li>
+            </ul>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import { Badge } from "@/components/ui/badge";
 import { Drawer, DrawerTrigger } from "@/components/ui/drawer";
+import { Skeleton } from "@/components/ui/skeleton";
 
 useHead({
     link: [
@@ -60,17 +81,24 @@ interface popularFood {
     popularity: number;
     calories: number;
     cuisine: string;
+    image: string;
 }
 
+const skeleton = ref();
 const popularFoods = ref<popularFood[]>();
 const fetchPopularFoods = async function () {
     const response = await $fetch("/api/popularfoods");
 
-    // console.log(response);
     if (response.statusCode !== 200) {
         showError({
             statusCode: response.statusCode,
             statusMessage: response.message,
+        });
+    }
+
+    if (response.statusCode === 200) {
+        skeleton.value.forEach((skeleton: any) => {
+            skeleton.classList.add("hidden");
         });
     }
 

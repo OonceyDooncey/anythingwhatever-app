@@ -2,6 +2,7 @@ import { useGlobalStore } from "~/stores";
 
 export const fetchFoodInfo = async (food: string) => {
     const store = useGlobalStore();
+    store.fetching = true;
 
     store.selectedFood = food;
 
@@ -25,4 +26,8 @@ export const fetchFoodInfo = async (food: string) => {
 
     const trimmedFoodName = store.selectedFood.replace(/\s/g, "");
     store.searchURL = `https://www.google.com/maps/search/${trimmedFoodName}`;
+
+    setTimeout(() => {
+        store.fetching = false;
+    }, 1000);
 };
