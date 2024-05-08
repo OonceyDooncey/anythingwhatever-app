@@ -5,6 +5,7 @@ interface foodInfoResponse {
     calories: number | null;
     description: string | null;
     popularity: number | null;
+    image: string | null;
     statusCode: number;
     message: string;
 }
@@ -16,7 +17,7 @@ export default defineEventHandler(async (event) => {
 
     const { data, error } = await supabase
         .from("foods")
-        .select("cuisine, calories, description, popularity")
+        .select("cuisine, calories, description, popularity, image")
         .eq("food", foodName);
 
     if (error) {
@@ -25,6 +26,7 @@ export default defineEventHandler(async (event) => {
             cuisine: null,
             calories: null,
             popularity: null,
+            image: null,
             statusCode: 500,
             message: "Failed to retrieve data",
         };
@@ -36,6 +38,7 @@ export default defineEventHandler(async (event) => {
         cuisine: data[0].cuisine,
         calories: data[0].calories,
         popularity: data[0].popularity,
+        image: data[0].image,
         statusCode: 200,
         message: "Success",
     };

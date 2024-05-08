@@ -11,7 +11,7 @@ export default defineEventHandler(async () => {
 
     const { data, error } = await supabase
         .from("foods")
-        .select("food, popularity, calories, cuisine");
+        .select("food, popularity, calories, cuisine, image");
 
     if (error) {
         response = {
