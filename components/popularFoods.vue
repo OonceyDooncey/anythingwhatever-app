@@ -6,7 +6,7 @@
         <div>
             <ul v-for="skeleton in 3" ref="skeleton">
                 <li
-                    class="w-[362px] h-[100px] border-2 border-lead rounded-xl mt-6">
+                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-6">
                     <div class="flex items-center justify-between p-4">
                         <Skeleton
                             class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
