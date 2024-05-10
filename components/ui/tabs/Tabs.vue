@@ -11,7 +11,7 @@ const forwarded = useForwardPropsEmits(props, emits);
 <template>
     <TabsRoot
         v-bind="forwarded"
-        class="h-[90%] flex flex-col divide-y-2 divide-lead50">
+        class="h-[90%] flex flex-col divide-y-2 divide-lead50 justify-between">
         <slot />
     </TabsRoot>
 </template>

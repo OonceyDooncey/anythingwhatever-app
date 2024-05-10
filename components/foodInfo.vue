@@ -10,7 +10,7 @@
             </div>
             <div class="flex flex-col items-center">
                 <Skeleton class="w-[180px] h-[40px] mt-4" />
-                <Skeleton class="w-[350px] h-[70px] mt-4" />
+                <Skeleton class="w-[350px] xs:w-[250px] h-[70px] mt-4" />
             </div>
         </div>
         <div
@@ -75,10 +75,10 @@ const updatePopularity = async () => {
         body: { popularity, foodName },
     });
 
-    if (response.statusCode === 500) {
+    if (response && response.statusCode === 500) {
         showError({
             statusCode: response.statusCode,
-            statusMessage: response,
+            statusMessage: response.message,
         });
     }
 };

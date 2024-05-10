@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center w-[80%] mx-auto mt-4">
-        <h1 class="font-caveat text-lead text-3xl">
+        <h1 class="font-caveat text-lead text-3xl xs:text-2xl">
             How rich are you feeling?
         </h1>
         <div v-for="budget in budgets">

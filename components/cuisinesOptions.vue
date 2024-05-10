@@ -1,6 +1,8 @@
 <template>
     <div class="flex flex-col items-center w-[80%] mx-auto mt-4">
-        <h1 class="font-caveat text-lead text-3xl">What are you thinking of</h1>
+        <h1 class="font-caveat text-lead text-3xl xs:text-2xl">
+            What are you thinking of
+        </h1>
         <div class="grid grid-cols-2 w-full mt-12 gap-y-6 gap-x-3">
             <div v-for="cuisine in cuisines">
                 <NuxtLink

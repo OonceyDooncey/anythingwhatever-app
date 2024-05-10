@@ -19,7 +19,7 @@ const delegatedProps = computed(() => {
         v-bind="delegatedProps"
         :class="
             cn(
-                'flex h-[15%] bg-muted p-1 text-muted-foreground justify-evenly bg-transparent rounded-none items-center',
+                'flex h-[12%] bg-muted p-1 text-muted-foreground justify-evenly bg-transparent rounded-none items-center',
                 props.class
             )
         ">

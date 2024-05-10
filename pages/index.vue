@@ -18,31 +18,31 @@
             <TabsList class="overflow-hidden">
                 <TabsTrigger value="home" class="group">
                     <span
-                        class="material-symbols-outlined scale-[2.5] translate-y-4 group-data-[state=active]:scale-[2] group-data-[state=active]:translate-y-2 duration-300">
+                        class="material-symbols-outlined scale-[2] translate-y-4 group-data-[state=active]:scale-[1.5] group-data-[state=active]:translate-y-2 duration-300">
                         home
                     </span>
                     <span
-                        class="font-caveat text-2xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-4 duration-300">
+                        class="font-caveat text-xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-2 duration-300">
                         Home
                     </span>
                 </TabsTrigger>
                 <TabsTrigger value="cuisines" class="group">
                     <span
-                        class="material-symbols-outlined scale-[2.5] translate-y-4 group-data-[state=active]:scale-[2] group-data-[state=active]:translate-y-2 duration-300">
+                        class="material-symbols-outlined scale-[2] translate-y-4 group-data-[state=active]:scale-[1.5] group-data-[state=active]:translate-y-2 duration-300">
                         menu_book
                     </span>
                     <span
-                        class="font-caveat text-2xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-4 duration-300">
+                        class="font-caveat text-xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-2 duration-300">
                         Cuisines
                     </span>
                 </TabsTrigger>
                 <TabsTrigger value="budget" class="group">
                     <span
-                        class="material-symbols-outlined scale-[2.5] translate-y-4 group-data-[state=active]:scale-[2] group-data-[state=active]:translate-y-2 duration-300">
+                        class="material-symbols-outlined scale-[2] translate-y-4 group-data-[state=active]:scale-[1.5] group-data-[state=active]:translate-y-2 duration-300">
                         monetization_on
                     </span>
                     <span
-                        class="font-caveat text-2xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-4 duration-300">
+                        class="font-caveat text-xl pt-1 opacity-0 translate-y-6 group-data-[state=active]:opacity-100 group-data-[state=active]:translate-y-2 duration-300">
                         Budget
                     </span>
                 </TabsTrigger>
@@ -50,11 +50,11 @@
                     to="/results/anything"
                     class="flex flex-col items-center text-lead50">
                     <span
-                        class="material-symbols-outlined scale-[2.5] translate-y-4 group-data-[state=active]:scale-[2] group-data-[state=active]:translate-y-2 duration-300">
+                        class="material-symbols-outlined scale-[2] translate-y-4 group-data-[state=active]:scale-[1.5] group-data-[state=active]:translate-y-2 duration-300">
                         cached
                     </span>
                     <span
-                        class="font-caveat text-2xl pt-1 opacity-0 translate-y-6">
+                        class="font-caveat text-xl pt-1 opacity-0 translate-y-6">
                         Randomize
                     </span>
                 </NuxtLink>
