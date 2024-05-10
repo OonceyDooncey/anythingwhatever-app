@@ -14,7 +14,7 @@ export const fetchFoodInfo = async (food: string) => {
     if (response.statusCode !== 200) {
         showError({
             statusCode: response.statusCode,
-            statusMessage: response.statusMessage,
+            statusMessage: response.message,
         });
     }
 
