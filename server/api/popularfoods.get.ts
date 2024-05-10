@@ -1,7 +1,15 @@
 import { supabase } from "../dbAuth/supabase";
 
+interface popularFood {
+    food: string;
+    popularity: number;
+    calories: number;
+    cuisine: string;
+    image: string;
+}
+
 interface popularFoodResponse {
-    popularFoodList: object[];
+    popularFoodList: popularFood[];
     statusCode: number;
     message: string;
 }
