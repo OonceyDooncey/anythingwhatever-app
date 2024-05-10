@@ -1,11 +1,11 @@
 import { supabase } from "../dbAuth/supabase";
 
 interface foodInfoResponse {
-    cuisine: string | null;
-    calories: number | null;
-    description: string | null;
-    popularity: number | null;
-    image: string | null;
+    cuisine: string | undefined;
+    calories: number | undefined;
+    description: string | undefined;
+    popularity: number | undefined;
+    image: string | undefined;
     statusCode: number;
     message: string;
 }
@@ -22,11 +22,11 @@ export default defineEventHandler(async (event) => {
 
     if (error) {
         response = {
-            description: null,
-            cuisine: null,
-            calories: null,
-            popularity: null,
-            image: null,
+            description: undefined,
+            cuisine: undefined,
+            calories: undefined,
+            popularity: undefined,
+            image: undefined,
             statusCode: 500,
             message: "Failed to retrieve data",
         };
