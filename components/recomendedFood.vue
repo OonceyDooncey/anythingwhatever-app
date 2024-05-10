@@ -8,7 +8,7 @@
             height="100px"
             class="rounded-full" />
         <h4 class="font-caveat text-lead xs:text-xl text-2xl mt-2">
-            Recommended food of the day
+            Recommended food
         </h4>
         <span class="font-shadowsintolight text-lead text-3xl">{{ food }}</span>
     </div>
