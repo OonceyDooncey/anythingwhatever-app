@@ -16,6 +16,7 @@ interface popularFoodResponse {
 
 export default defineEventHandler(async () => {
     let response: popularFoodResponse;
+    let sortedList: popularFood[] = [];
 
     const { data, error } = await supabase
         .from("foods")
@@ -27,12 +28,13 @@ export default defineEventHandler(async () => {
             statusCode: 500,
             message: "Failed to retrieve data",
         };
-        return response;
     }
 
-    const sortedList = data
-        .sort((a, b) => b.popularity - a.popularity)
-        .slice(0, 3);
+    if (data) {
+        sortedList = data
+            .sort((a, b) => b.popularity - a.popularity)
+            .slice(0, 3);
+    }
 
     response = {
         popularFoodList: sortedList,
