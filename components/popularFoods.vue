@@ -76,16 +76,8 @@ useHead({
     ],
 });
 
-interface popularFood {
-    food: string;
-    popularity: number;
-    calories: number;
-    cuisine: string;
-    image: string;
-}
-
 const skeleton = ref();
-const popularFoods = ref<popularFood[]>();
+const popularFoods = ref();
 const fetchPopularFoods = async function () {
     const response = await $fetch("/api/popularfoods");
 
