@@ -4,25 +4,46 @@
             Popular choice
         </h3>
         <div>
-            <ul v-for="skeleton in 3" ref="skeleton">
+            <ul ref="skeleton">
                 <li
-                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-6">
-                    <div class="flex items-center justify-between p-4">
-                        <Skeleton
-                            class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
-                        <div class="flex flex-col w-4/6">
-                            <Skeleton class="w-[150px] h-[25px] rounded-xl" />
-                            <div class="mt-[7px] flex items-center">
-                                <Skeleton class="w-[58px] h-[32px] mr-1" />
-                                <Skeleton class="w-[85px] h-[32px]" />
-                            </div>
+                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    <Skeleton
+                        class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
+                    <div class="flex flex-col">
+                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                        <div class="mt-[7px] flex items-center">
+                            <Skeleton class="w-[58px] h-[32px] mr-1" />
+                            <Skeleton class="w-[85px] h-[32px]" />
                         </div>
-                        <span class="w-1/6"> </span>
+                    </div>
+                </li>
+                <li
+                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    <Skeleton
+                        class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
+                    <div class="flex flex-col">
+                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                        <div class="mt-[7px] flex items-center">
+                            <Skeleton class="w-[58px] h-[32px] mr-1" />
+                            <Skeleton class="w-[85px] h-[32px]" />
+                        </div>
+                    </div>
+                </li>
+                <li
+                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    <Skeleton
+                        class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
+                    <div class="flex flex-col">
+                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                        <div class="mt-[7px] flex items-center">
+                            <Skeleton class="w-[58px] h-[32px] mr-1" />
+                            <Skeleton class="w-[85px] h-[32px]" />
+                        </div>
                     </div>
                 </li>
             </ul>
             <ul v-for="food in popularFoods">
-                <li class="mt-6">
+                <li class="mt-3">
                     <Drawer>
                         <DrawerTrigger
                             @click="fetchFoodInfo(food.food)"
@@ -78,6 +99,7 @@ useHead({
 
 const skeleton = ref();
 const popularFoods = ref();
+
 const fetchPopularFoods = async function () {
     const response = await $fetch("/api/popularfoods");
 
@@ -89,12 +111,13 @@ const fetchPopularFoods = async function () {
     }
 
     if (response.statusCode === 200) {
-        skeleton.value.forEach((skeleton: any) => {
-            skeleton.classList.add("hidden");
-        });
+        skeleton.value.classList.add("hidden");
     }
 
     popularFoods.value = response.popularFoodList;
 };
-fetchPopularFoods();
+
+onMounted(() => {
+    fetchPopularFoods();
+});
 </script>
