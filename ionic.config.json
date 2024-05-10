@@ -1,7 +1,0 @@
-{
-    "name": "anything-whatever",
-    "integrations": {
-        "capacitor": {}
-    },
-    "type": "custom"
-}

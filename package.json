@@ -1,43 +1,35 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "ionic:build": "npm run build",
-    "ionic:serve": "npm run dev"
-  },
-  "dependencies": {
-    "@capacitor/android": "6.0.0",
-    "@capacitor/app": "6.0.0",
-    "@capacitor/cli": "6.0.0",
-    "@capacitor/core": "6.0.0",
-    "@capacitor/haptics": "6.0.0",
-    "@capacitor/keyboard": "6.0.0",
-    "@capacitor/status-bar": "6.0.0",
-    "@nuxt/image": "^1.6.0",
-    "@nuxtjs/supabase": "^1.2.2",
-    "@pinia/nuxt": "^0.5.1",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "lucide-vue-next": "^0.376.0",
-    "nuxt": "^3.11.2",
-    "pinia": "^2.1.7",
-    "radix-vue": "^1.7.3",
-    "shadcn-nuxt": "^0.10.4",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7",
-    "vaul-vue": "^0.1.0",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
-  },
-  "version": "0.0.0",
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.0",
-    "typescript": "^5.4.5"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@nuxt/image": "^1.6.0",
+        "@nuxtjs/supabase": "^1.2.2",
+        "@pinia/nuxt": "^0.5.1",
+        "@vite-pwa/nuxt": "^0.7.0",
+        "class-variance-authority": "^0.7.0",
+        "clsx": "^2.1.1",
+        "lucide-vue-next": "^0.376.0",
+        "nuxt": "^3.11.2",
+        "pinia": "^2.1.7",
+        "radix-vue": "^1.7.3",
+        "shadcn-nuxt": "^0.10.4",
+        "tailwind-merge": "^2.3.0",
+        "tailwindcss-animate": "^1.0.7",
+        "vaul-vue": "^0.1.0",
+        "vue": "^3.4.21",
+        "vue-router": "^4.3.0"
+    },
+    "version": "0.0.0",
+    "devDependencies": {
+        "@nuxtjs/tailwindcss": "^6.12.0",
+        "typescript": "^5.4.5"
+    }
 }
