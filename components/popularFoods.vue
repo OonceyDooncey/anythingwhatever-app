@@ -4,42 +4,63 @@
             Popular choice
         </h3>
         <div>
-            <ul ref="skeleton">
+            <ul ref="skeleton" class="mt-3">
                 <li
-                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
                     <Skeleton
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
-                    <div class="flex flex-col">
-                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                    <div class="flex flex-col w-4/6 items-start">
+                        <Skeleton
+                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
                         <div class="mt-[7px] flex items-center">
-                            <Skeleton class="w-[58px] h-[32px] mr-1" />
-                            <Skeleton class="w-[85px] h-[32px]" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
                         </div>
                     </div>
+                    <span class="w-1/6 flex justify-center">
+                        <Skeleton
+                            class="w-[20px] h-[20px] rounded-sm sm:w-[15px] xs:w-[15px]" />
+                    </span>
                 </li>
                 <li
-                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
                     <Skeleton
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
-                    <div class="flex flex-col">
-                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                    <div class="flex flex-col w-4/6 items-start">
+                        <Skeleton
+                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
                         <div class="mt-[7px] flex items-center">
-                            <Skeleton class="w-[58px] h-[32px] mr-1" />
-                            <Skeleton class="w-[85px] h-[32px]" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
                         </div>
                     </div>
+                    <span class="w-1/6 flex justify-center">
+                        <Skeleton
+                            class="w-[20px] h-[20px] rounded-sm sm:w-[15px] xs:w-[15px]" />
+                    </span>
                 </li>
                 <li
-                    class="w-full h-[100px] border-2 border-lead rounded-xl mt-3 flex items-center justify-between p-4">
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
                     <Skeleton
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
-                    <div class="flex flex-col">
-                        <Skeleton class="w-[140px] h-[25px] rounded-xl" />
+                    <div class="flex flex-col w-4/6 items-start">
+                        <Skeleton
+                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
                         <div class="mt-[7px] flex items-center">
-                            <Skeleton class="w-[58px] h-[32px] mr-1" />
-                            <Skeleton class="w-[85px] h-[32px]" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
+                            <Skeleton
+                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
                         </div>
                     </div>
+                    <span class="w-1/6 flex justify-center">
+                        <Skeleton
+                            class="w-[20px] h-[20px] rounded-sm sm:w-[15px] xs:w-[15px]" />
+                    </span>
                 </li>
             </ul>
             <ul v-for="food in popularFoods">
@@ -53,7 +74,7 @@
                                 format="webp"
                                 width="60px"
                                 height="60px"
-                                class="rounded-xl mr-2 w-[60px] h-[60px] object-cover" />
+                                class="rounded-xl mr-2 w-[60px] h-[60px] object-cover xs:w-[50px] xs:h-[50px]" />
                             <div class="flex flex-col w-4/6">
                                 <h4
                                     class="text-left font-shadowsintolight text-lead text-2xl">

@@ -5,16 +5,19 @@
             ANYTHING, WHATEVER
         </h1>
         <Tabs default-value="home">
-            <TabsContent value="home">
-                <RecomendedFood />
-                <PopularFoods />
-            </TabsContent>
-            <TabsContent value="cuisines">
-                <CuisinesOptions />
-            </TabsContent>
-            <TabsContent value="budget">
-                <BudgetOptions />
-            </TabsContent>
+            <div
+                class="flex flex-col md:justify-end sm:justify-center xs:justify-center">
+                <TabsContent value="home">
+                    <RecomendedFood />
+                    <PopularFoods />
+                </TabsContent>
+                <TabsContent value="cuisines">
+                    <CuisinesOptions />
+                </TabsContent>
+                <TabsContent value="budget">
+                    <BudgetOptions />
+                </TabsContent>
+            </div>
             <TabsList class="overflow-hidden">
                 <TabsTrigger value="home" class="group">
                     <span

@@ -1,10 +1,10 @@
 <template>
     <DrawerContent>
         <div
-            class="flex flex-col items-center w-[88%] mt-5"
+            class="flex flex-col items-center w-[88%] mt-10"
             :class="store.fetching ? 'block' : 'hidden'">
             <Skeleton class="w-[180px] h-[180px] mt-10" />
-            <div class="flex w-[70%] items-start mt-6">
+            <div class="flex items-center mt-6">
                 <Skeleton class="w-[90px] h-[35px] mr-4 xs:mr-2" />
                 <Skeleton class="w-[100px] h-[35px]" />
             </div>
@@ -14,15 +14,15 @@
             </div>
         </div>
         <div
-            class="flex flex-col items-center"
+            class="flex flex-col items-center mt-16"
             :class="store.fetching ? 'hidden' : 'block'">
             <NuxtImg
                 :src="store.selectedFoodImage"
                 format="webp"
                 width="180px"
                 height="180px"
-                class="rounded-full mt-10 w-[180px] h-[180px] object-cover" />
-            <div class="w-[60%] flex items-start mt-6 font-shadowsintolight">
+                class="rounded-full w-[180px] h-[180px] object-cover" />
+            <div class="flex items-center mt-6 font-shadowsintolight">
                 <Badge
                     class="text-lead pl-4 pr-4 text-xl bg-transparent border-lead border-2 font-normal mr-4 xs:mr-2 hover:bg-transparent">
                     {{ store.selectedFoodCalories }}kcal

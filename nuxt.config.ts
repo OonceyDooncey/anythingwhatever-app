@@ -23,7 +23,7 @@ export default defineNuxtConfig({
             short_name: "Anything, Whatever",
             description:
                 "A food randomizer for people struggling to choose their meals",
-            theme_color: "#F8FAFC",
+            theme_color: "#C2C4C1",
             icons: [
                 {
                     src: "icons/a_w_64x64.png",
