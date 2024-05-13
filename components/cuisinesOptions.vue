@@ -79,7 +79,7 @@ const cuisines = [
     },
     {
         name: "Vietnamese",
-        imgUrl: "https://res.cloudinary.com/dfdaqvqps/image/upload/v1714630364/Anything%2C%20whatever/cuisines/k9phrtfaolphxyky4y7h.png",
+        imgUrl: "https://res.cloudinary.com/dfdaqvqps/image/upload/v1715605939/Anything%2C%20whatever/cuisines/wiqtch7p3lapgsausrur.png",
         url: "results/cuisine?value=vietnamese",
     },
 ];
