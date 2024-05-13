@@ -11,12 +11,11 @@
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
                     <div class="flex flex-col w-4/6 items-start">
                         <Skeleton
-                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
+                            class="w-[100px] h-[25px] rounded-xl xs:w-[80px]" />
                         <div class="mt-[7px] flex items-center">
                             <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
-                            <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
+                                class="w-[65px] xs:w-[55px] h-[32px] mr-1" />
+                            <Skeleton class="w-[65px] xs:w-[55px] h-[32px]" />
                         </div>
                     </div>
                     <span class="w-1/6 flex justify-center">
@@ -30,12 +29,11 @@
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
                     <div class="flex flex-col w-4/6 items-start">
                         <Skeleton
-                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
+                            class="w-[100px] h-[25px] rounded-xl xs:w-[80px]" />
                         <div class="mt-[7px] flex items-center">
                             <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
-                            <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
+                                class="w-[65px] xs:w-[55px] h-[32px] mr-1" />
+                            <Skeleton class="w-[65px] xs:w-[55px] h-[32px]" />
                         </div>
                     </div>
                     <span class="w-1/6 flex justify-center">
@@ -49,12 +47,11 @@
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
                     <div class="flex flex-col w-4/6 items-start">
                         <Skeleton
-                            class="w-[180px] h-[25px] rounded-xl sm:w-[130px] xs:w-[100px]" />
+                            class="w-[100px] h-[25px] rounded-xl xs:w-[80px]" />
                         <div class="mt-[7px] flex items-center">
                             <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px] mr-1" />
-                            <Skeleton
-                                class="w-[85px] h-[32px] sm:w-[50px] xs:w-[50px]" />
+                                class="w-[65px] xs:w-[55px] h-[32px] mr-1" />
+                            <Skeleton class="w-[65px] xs:w-[55px] h-[32px]" />
                         </div>
                     </div>
                     <span class="w-1/6 flex justify-center">
