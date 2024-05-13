@@ -29,5 +29,5 @@ export const fetchFoodInfo = async (food: string) => {
 
     setTimeout(() => {
         store.fetching = false;
-    }, 1000);
+    }, 500);
 };
