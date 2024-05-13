@@ -10,7 +10,7 @@
             </div>
             <div class="flex flex-col items-center">
                 <Skeleton class="w-[180px] h-[40px] mt-4" />
-                <Skeleton class="w-[350px] xs:w-[250px] h-[70px] mt-4" />
+                <Skeleton class="w-[300px] xs:w-[250px] h-[70px] mt-4" />
             </div>
         </div>
         <div
