@@ -70,16 +70,20 @@ const updatePopularity = async () => {
     const popularity = store.selectedFoodPopularity;
     const foodName = store.selectedFood;
 
-    const response = await $fetch("/api/popularity", {
-        method: "POST",
-        body: { popularity, foodName },
-    });
-
-    if (response && response.statusCode === 500) {
-        showError({
-            statusCode: response.statusCode,
-            statusMessage: response.message,
+    if (store.updatePopularity) {
+        const response = await $fetch("/api/popularity", {
+            method: "POST",
+            body: { popularity, foodName },
         });
+
+        if (response && response.statusCode === 500) {
+            showError({
+                statusCode: response.statusCode,
+                statusMessage: response.message,
+            });
+        }
+
+        store.updatePopularity = false;
     }
 };
 </script>

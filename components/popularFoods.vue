@@ -67,7 +67,10 @@
                 <li class="mt-3">
                     <Drawer>
                         <DrawerTrigger
-                            @click="fetchFoodInfo(food.food)"
+                            @click="
+                                fetchFoodInfo(food.food);
+                                store.updatePopularity = true;
+                            "
                             class="bg-transparent border-2 border-lead rounded-xl flex items-center p-4 w-full justify-between">
                             <NuxtImg
                                 :src="food.image"
@@ -120,6 +123,7 @@ useHead({
 
 const skeleton = ref();
 const popularFoods = ref();
+const store = useGlobalStore();
 
 const fetchPopularFoods = async function () {
     const response = await $fetch("/api/popularfoods");

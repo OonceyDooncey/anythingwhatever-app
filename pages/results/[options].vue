@@ -1,7 +1,10 @@
 <template>
     <NuxtLayout>
         <div class="h-[10%] flex items-end">
-            <NuxtLink to="/" class="flex items-center w-fit p-1 ml-5">
+            <NuxtLink
+                to="/"
+                class="flex items-center w-fit p-1 ml-5"
+                @click="store.updatePopularity = false">
                 <span
                     class="material-symbols-outlined text-lead pr-2 scale-125">
                     arrow_back
@@ -66,6 +69,12 @@ useHead({
     ],
 });
 
+const store = useGlobalStore();
+
+onMounted(() => {
+    store.updatePopularity = true;
+});
+
 const foodName = ref<string>();
 const text = ref<string>("You should have.....");
 const img = ref<string>(
@@ -107,6 +116,7 @@ const fetchFood = async function () {
 fetchFood();
 
 const regenerateFood = debounce(function () {
+    store.updatePopularity = true;
     skeleton.value.classList.remove("hidden");
     foodName.value = "";
 

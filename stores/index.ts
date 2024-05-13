@@ -10,5 +10,6 @@ export const useGlobalStore = defineStore("useGlobalStore", {
         selectedFoodImage: "" as string | undefined,
         searchURL: "",
         fetching: true,
+        updatePopularity: true,
     }),
 });

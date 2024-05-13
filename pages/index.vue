@@ -88,4 +88,10 @@ useHead({
         },
     ],
 });
+
+const store = useGlobalStore();
+
+onMounted(() => {
+    store.updatePopularity = true;
+});
 </script>
