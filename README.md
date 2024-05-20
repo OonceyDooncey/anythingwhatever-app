@@ -1,3 +1,17 @@
+# Anything, Whatever
+
+### A dynamic randomizer designed to help those struggling to decide what to eat.
+
+![Built with](https://skillicons.dev/icons?i=nuxt,pinia,typescript,tailwind,supabase)
+
+[anythingwhatever-app.vercel.app](https://anythingwhatever-app.vercel.app/)
+
+## Features
+
+-   Generate food suggestions based on cuisine or budget.
+-   Receive food recommendations based on what others have chosen.
+-   Discover additional details about the food selection
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
