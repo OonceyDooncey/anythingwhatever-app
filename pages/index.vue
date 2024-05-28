@@ -89,6 +89,17 @@ useHead({
     ],
 });
 
+useSeoMeta({
+    title: "Anything, Whatever",
+    ogTitle: "Anything, Whatever",
+    description:
+        "A food randomiser for people suffering decision fatigue. Generate food suggestions base on your preference.",
+    ogDescription:
+        "A food randomiser for people suffering decision fatigue. Generate food suggestions base on your preference.",
+    ogImage: "/ogImage.png",
+    twitterCard: "summary_large_image",
+});
+
 const store = useGlobalStore();
 
 onMounted(() => {
