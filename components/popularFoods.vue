@@ -6,9 +6,43 @@
         <div>
             <ul ref="skeleton" class="mt-3">
                 <li
-                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3"
-                    v-for="food in popularFoods"
-                    :key="food.food">
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
+                    <Skeleton
+                        class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
+                    <div class="flex flex-col w-4/6 items-start">
+                        <Skeleton
+                            class="w-[100px] h-[25px] rounded-xl xs:w-[80px]" />
+                        <div class="mt-[7px] flex items-center">
+                            <Skeleton
+                                class="w-[65px] xs:w-[55px] h-[32px] mr-1" />
+                            <Skeleton class="w-[65px] xs:w-[55px] h-[32px]" />
+                        </div>
+                    </div>
+                    <span class="w-1/6 flex justify-center">
+                        <Skeleton
+                            class="w-[20px] h-[20px] rounded-sm sm:w-[15px] xs:w-[15px]" />
+                    </span>
+                </li>
+                <li
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
+                    <Skeleton
+                        class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
+                    <div class="flex flex-col w-4/6 items-start">
+                        <Skeleton
+                            class="w-[100px] h-[25px] rounded-xl xs:w-[80px]" />
+                        <div class="mt-[7px] flex items-center">
+                            <Skeleton
+                                class="w-[65px] xs:w-[55px] h-[32px] mr-1" />
+                            <Skeleton class="w-[65px] xs:w-[55px] h-[32px]" />
+                        </div>
+                    </div>
+                    <span class="w-1/6 flex justify-center">
+                        <Skeleton
+                            class="w-[20px] h-[20px] rounded-sm sm:w-[15px] xs:w-[15px]" />
+                    </span>
+                </li>
+                <li
+                    class="w-full h-[100px] border-2 border-lead rounded-xl flex items-center justify-between p-4 mt-3">
                     <Skeleton
                         class="w-[62px] h-[62px] rounded-xl mr-2 bg-lead50" />
                     <div class="flex flex-col w-4/6 items-start">
@@ -26,7 +60,7 @@
                     </span>
                 </li>
             </ul>
-            <ul v-for="food in popularFoods" :key="food.food">
+            <ul v-for="food in popularFoods">
                 <li class="mt-3">
                     <Drawer>
                         <DrawerTrigger

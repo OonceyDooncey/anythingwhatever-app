@@ -4,7 +4,7 @@
             What are you thinking of
         </h1>
         <div class="grid grid-cols-2 w-full mt-12 gap-y-6 gap-x-3">
-            <div v-for="cuisine in cuisines" :key="cuisine.name">
+            <div v-for="cuisine in cuisines">
                 <NuxtLink
                     :to="cuisine.url"
                     class="flex items-center border-2 border-lead rounded-2xl">
