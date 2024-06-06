@@ -3,7 +3,7 @@
         <h1 class="font-caveat text-lead text-3xl xs:text-2xl">
             How rich are you feeling?
         </h1>
-        <div v-for="budget in budgets">
+        <div v-for="budget in budgets" :key="budget.budget">
             <NuxtLink
                 :to="budget.url"
                 class="flex flex-col items-center border-2 border-lead rounded-2xl p-2 w-[160px] h-[160px] mt-4">
