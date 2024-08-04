@@ -53,7 +53,10 @@
                     Nah
                 </Button>
             </div>
-            <p class="font-caveat text-lead text-2xl items-center mt-4" :class="store.debounce ? 'block' : 'hidden'">
+            <p
+                class="text-center justify-center font-caveat text-lead text-2xl mt-4"
+                :class="store.debounce ? 'flex' : 'hidden'"
+            >
                 Please wait before pressing the button again
             </p>
         </div>
