@@ -11,5 +11,6 @@ export const useGlobalStore = defineStore("useGlobalStore", {
         searchURL: "",
         fetching: true,
         updatePopularity: true,
+        debounce: false,
     }),
 });

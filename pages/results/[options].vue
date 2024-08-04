@@ -47,10 +47,15 @@
                 </Drawer>
                 <Button
                     class="font-caveat text-xl bg-transparent border-2 border-lead rounded-3xl text-lead w-[40%] hover:bg-transparent"
-                    @click="regenerateFood">
+                    :class="store.debounce ? 'bg-red border-red text-white' : 'border-lead'"
+                    @click="regenerateFood"
+                >
                     Nah
                 </Button>
             </div>
+            <p class="font-caveat text-lead text-2xl items-center mt-4" :class="store.debounce ? 'block' : 'hidden'">
+                Please wait before pressing the button again
+            </p>
         </div>
     </NuxtLayout>
 </template>

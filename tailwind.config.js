@@ -20,6 +20,7 @@ module.exports = {
             lead: "#5C6274",
             lead50: "#5C627480",
             white: "#F8FAFC",
+            red: "#D22B2B",
         },
         container: {
             center: true,
